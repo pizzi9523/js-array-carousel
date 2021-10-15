@@ -2,19 +2,24 @@ img{
     width: 100%;
 }
 
-.carousel img{
+.thumb img{
     height: calc(600px / 5);
 }
 
-.primary_img{
+.item{
     position: relative;
+    display: none;
 }
 
-.primary_img img{
+.item.active{
+    display: block;
+}
+
+.item img{
     height: 600px;
 }
 
-.description{
+.text{
     position: absolute;
     bottom: 0;
     right: 2rem;
@@ -22,10 +27,9 @@ img{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
 }
 
-.description h1{
+.text h1{
     font-size: 25px;
 }
 
@@ -42,7 +46,7 @@ img{
     max-height: 600px;
 }
 
-.carousel{
+.thumb{
  position: relative;
 }
 

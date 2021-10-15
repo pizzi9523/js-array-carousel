@@ -26,25 +26,36 @@ const text = [
 //seleziono i 2 bottoni
 const button_up_element = document.getElementById("up");
 const button_down_element = document.getElementById("down")
-
-//inserisco la prima immagine in sequenza nel primary_img
 const primary_image_element = document.querySelector(".primary_img");
-const img_element = document.createElement("img")
-primary_image_element.insertAdjacentElement("afterbegin", img_element);
-img_element.src = items[0];
+const carousel_element = document.querySelector(".carousel")
 
-//ad ogni click modifico l'immagine dentro primary_img
-for (i = 0; i < items.length; i++) {
-    button_down_element.addEventListener("click", function () {
-        img_element.src = items[i]
-        console.log(i);
-    })
+
+let item = "";
+let thumb = "";
+let position = 4;
+
+//inserisco le immagini dentro il carosello
+for (let i = 0; i < items.length; i++) {
+    item += `
+    <div class="item">
+        <img src="${items[i]}" alt="">
+        <div class="text">
+            <h3>${title[i]}</h3>
+            <p>${text[i]}</p>
+        </div>
+    </div> `;
+
+    thumb += `
+    <div class="thumb">
+        <img src="${items[i]}" alt="">
+    </div>`
 }
 
+primary_image_element.innerHTML = item;
+document.getElementsByClassName("item")[position].classList.add("active")
+carousel_element.innerHTML = thumb;
+document.getElementsByClassName("thumb")[position].classList.add("active")
 
-button_up_element.addEventListener("click", function () {
-    i--;
-    img_element.src = items[i]
-    console.log(i);
-})
+
+
 
