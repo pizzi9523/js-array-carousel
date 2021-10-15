@@ -2,8 +2,13 @@ img{
     width: 100%;
 }
 
+
 .thumb img{
-    height: calc(600px / 5);
+    height: calc(500px / 5);
+}
+
+.item img{
+    height: 510px;
 }
 
 .item{
@@ -15,8 +20,8 @@ img{
     display: block;
 }
 
-.item img{
-    height: 600px;
+.thumb.active{
+    border: 5px solid lightgray;
 }
 
 .text{
@@ -32,9 +37,7 @@ img{
 .text h1{
     font-size: 25px;
 }
-
-
-
+ 
 .container{
     position: absolute;
     top: 50%;
@@ -62,4 +65,9 @@ img{
     bottom: 1rem;
     left: 50%;
     transform: translate(-50%);
+}
+
+button{
+    border-radius: 50%!important;
+    border: 1px solid black;
 }
