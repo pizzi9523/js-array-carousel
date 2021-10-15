@@ -41,3 +41,21 @@ img{
 .row{
     max-height: 600px;
 }
+
+.carousel{
+ position: relative;
+}
+
+#up{
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#down{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+}
