@@ -32,3 +32,19 @@ const primary_image_element = document.querySelector(".primary_img");
 const img_element = document.createElement("img")
 primary_image_element.insertAdjacentElement("afterbegin", img_element);
 img_element.src = items[0];
+
+//ad ogni click modifico l'immagine dentro primary_img
+for (i = 0; i < items.length; i++) {
+    button_down_element.addEventListener("click", function () {
+        img_element.src = items[i]
+        console.log(i);
+    })
+}
+
+
+button_up_element.addEventListener("click", function () {
+    i--;
+    img_element.src = items[i]
+    console.log(i);
+})
+
