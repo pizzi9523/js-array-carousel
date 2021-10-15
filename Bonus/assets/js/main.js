@@ -51,6 +51,7 @@ for (let i = 0; i < items.length; i++) {
     </div>`
 }
 
+
 primary_image_element.innerHTML = item;
 document.getElementsByClassName("item")[position].classList.add("active")
 carousel_element.innerHTML = thumb;
@@ -65,10 +66,17 @@ button_up_element.addEventListener("click", function () {
         position--;
     }
 
-    primary_image_element.innerHTML = item;
+    //Alternative Method add and remove class active
+    document.querySelector(".item.active").classList.remove("active")
+    document.getElementsByClassName("item")[position].classList.add("active")
+    document.querySelector(".thumb.active").classList.remove("active")
+    document.getElementsByClassName("thumb")[position].classList.add("active")
+
+    /* primary_image_element.innerHTML = item;
     document.getElementsByClassName("item")[position].classList.add("active")
     carousel_element.innerHTML = thumb;
-    document.getElementsByClassName("thumb")[position].classList.add("active")
+    document.getElementsByClassName("thumb")[position].classList.add("active") 
+    */
 })
 
 button_down_element.addEventListener("click", function () {
@@ -80,10 +88,18 @@ button_down_element.addEventListener("click", function () {
         position = 0;
     }
 
-    primary_image_element.innerHTML = item;
+    //Alternative Method add and remove class active
+    document.querySelector(".item.active").classList.remove("active")
+    document.getElementsByClassName("item")[position].classList.add("active")
+    document.querySelector(".thumb.active").classList.remove("active")
+    document.getElementsByClassName("thumb")[position].classList.add("active")
+
+
+    /* primary_image_element.innerHTML = item;
     document.getElementsByClassName("item")[position].classList.add("active")
     carousel_element.innerHTML = thumb;
     document.getElementsByClassName("thumb")[position].classList.add("active")
+     */
 })
 
 
