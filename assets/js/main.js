@@ -32,7 +32,7 @@ const carousel_element = document.querySelector(".carousel")
 
 let item = "";
 let thumb = "";
-let position = 4;
+let position = 0;
 
 //inserisco le immagini dentro il carosello
 for (let i = 0; i < items.length; i++) {
@@ -56,6 +56,30 @@ document.getElementsByClassName("item")[position].classList.add("active")
 carousel_element.innerHTML = thumb;
 document.getElementsByClassName("thumb")[position].classList.add("active")
 
+button_up_element.addEventListener("click", function () {
+    if (position > 0) {
+        position--;
+    }
+    else {
+        position = 0;
+    }
 
+    primary_image_element.innerHTML = item;
+    document.getElementsByClassName("item")[position].classList.add("active")
+    carousel_element.innerHTML = thumb;
+    document.getElementsByClassName("thumb")[position].classList.add("active")
+
+    console.log(position);
+})
+
+button_down_element.addEventListener("click", function () {
+    position++;
+
+    primary_image_element.innerHTML = item;
+    document.getElementsByClassName("item")[position].classList.add("active")
+    carousel_element.innerHTML = thumb;
+    document.getElementsByClassName("thumb")[position].classList.add("active")
+    console.log(position);
+})
 
 
