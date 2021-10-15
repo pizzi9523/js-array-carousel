@@ -29,9 +29,7 @@ img{
     bottom: 0;
     right: 2rem;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    text-align: end;
 }
 
 .text h1{
