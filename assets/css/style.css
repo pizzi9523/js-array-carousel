@@ -1,0 +1,22 @@
+img{
+    width: 100%;
+}
+
+.carousel img{
+    height: calc(600px / 5);
+}
+
+.primary_img img{
+    height: 600px;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.row{
+    max-height: 600px;
+}
