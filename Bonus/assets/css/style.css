@@ -22,6 +22,7 @@ img{
 
 .thumb.active{
     border: 5px solid lightgray;
+    filter: brightness(1);
 }
 
 .text{
@@ -49,6 +50,7 @@ img{
 
 .thumb{
  position: relative;
+ filter: brightness(0.5);
 }
 
 #up{
